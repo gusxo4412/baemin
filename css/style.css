@@ -1,0 +1,653 @@
+@charset "utf-8";
+
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #333;
+}
+
+img {
+    vertical-align: top;
+    border: 0;
+}
+
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+
+/* fullpage - dot */
+body #fp-nav ul li a span {/* custom dot */
+    background: url(../images/dots/nomal.png) 0% 0% / 100% 100% no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+body #fp-nav ul li a.active span {/* active custom dot */
+    background: url(../images/dots/active.png) 0% 0% / 100% 100% no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+.fp-viewing-0 #fp-nav {/* home화면 일 때, dot list 숨기기 */
+    display: none;
+}
+
+.fp-viewing-7 #fp-nav {/* footer화면 일 때, dot list 숨기기 */
+    display: none;
+}
+
+#fp-nav ul > li:first-child {/* home dot 숨기기 */
+    display: none;
+}
+
+#fp-nav ul > li:last-child {/* footer dot 숨기기 */
+    display: none;
+}
+
+
+
+/* header */
+header {
+    width: 1024px;
+    height: 108px;
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+header h3 {
+    margin-left: 50px;
+    margin-top: 70px;
+    float: left;
+    width: 142px;
+    height: 32px;
+}
+
+header h3 img {
+    width: 142px;
+    height: 32px;
+}
+
+header nav {
+    float: right;
+    margin-right: 50px;
+    margin-top: 60px;
+}
+
+header nav .appdown {
+    float: left;
+}
+
+header nav ul.gnb {
+    margin-right: 122px;
+}
+
+header nav ul.gnb > li {
+    float: left;
+    margin: 7px 10px;
+}
+
+header nav ul.gnb > li:nth-child(1) {
+    margin-top: 0;
+    margin-right: 26px;
+    opacity: 0;
+}
+
+header nav ul.gnb > li:nth-child(2) {
+    margin-right: 2px;
+}
+
+header nav ul.gnb > li > a {
+    display: block;
+}
+
+
+
+/* rider */
+.rider {
+    position: fixed;
+    right: 0;
+    top: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 0.3s;
+    z-index: 10;
+}
+
+
+/* scroll */
+.scroll {
+    position: fixed;
+    z-index: 10;
+    bottom: 30px;
+    left: 48%;
+    transform: translateX(-50%);
+    animation: 0.5s ease 0s 3 normal forwards running bounce;
+}
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+  
+    40% {
+      transform: translateY(-30px);
+    }
+  
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+
+/* fullpage - home */
+@keyframes zoom-in {
+    0% {
+        transform: scale(1.5, 1.5);
+    }
+    50% {
+        transform: scale(1.25, 1.25);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.home-bg {
+    background-image: url(../images/section1/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    inset: 0px;
+    animation: 1s linear 0s 1 normal forwards running zoom-in;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.home article {
+    width: 1024px;
+    left: 50%;
+    top: 168px;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.home article .title {
+    width: 50%;
+    margin: 0 50px;
+}
+
+.home article .title img {
+    width: 90%;
+}
+
+.home article .down {
+    color: #fff;
+    margin: 0 50px;
+    margin-top: 40px;
+}
+
+.home article .down .txt {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.38;
+    margin-bottom: 14px;
+}
+
+.home article .down .app {
+    float: left;
+}
+
+.home article .down .app ul > li {
+    float: left;
+    width: 200px;
+    height: 70px;
+    background-color: #fff;
+    margin-right: 12px;
+    border-radius: 100px;
+    position: relative;
+}
+
+.home article .down .app ul > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.home article .down .app ul > li > a img {
+    width: 140px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.home article .down .qr {
+    float: right;
+}
+
+
+/* fullpage - section1 */
+.section1 article {
+    width: 1024px;
+    left: 50%;
+    top: 168px;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.section1 article .title {
+    width: 50%;
+    margin: 0 50px;
+}
+
+.section1 article .title img {
+    width: 90%;
+}
+
+.section1 article .txt {
+    color: #fff;
+    margin: 20px 50px;
+}
+
+.section1 article .txt span {
+    opacity: 0.7;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+}
+
+.section1 article .tire {
+    width: 700px;
+    position: absolute;
+    right: -20%;
+    top: 3%;
+}
+
+.section1 article .bike {
+    width: 635px;
+    position: absolute;
+    right: -6%;
+    top: -10%;
+}
+
+@keyframes bike {
+    0% {
+        right: -6%;
+        top: -10%;
+    }
+    100% {
+        right: -13%;
+        top: 14%;
+    }
+}
+
+
+/* fullpage - section2 */
+.section2 article {
+    width: 1024px;
+    left: 50%;
+    top: 168px;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.section2 article .title {
+    width: 50%;
+    margin: 0 50px;
+}
+
+.section2 article .title img {
+    width: 90%;
+}
+
+.section2 article .txt {
+    color: #fff;
+    margin: 20px 50px;
+}
+
+.section2 article .txt span {
+    opacity: 0.7;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+}
+
+.section2 article .txt span:last-child {
+    margin-top: 0;
+}
+
+.section2 article .people {
+    width: 635px;
+    position: absolute;
+    right: 4%;
+    top: 49%;
+}
+
+.section2 article .people img {
+    position: absolute;
+    left: 0;
+    top: 635px;
+}
+
+@keyframes people {
+    0% {
+        top: 635px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+
+/* fullpage - section3 */
+.section3 article {
+    width: 1024px;
+    left: 50%;
+    top: 168px;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.section3 article .title {
+    width: 50%;
+    margin: 0 50px;
+}
+
+.section3 article .title img {
+    width: 90%;
+}
+
+.section3 article .txt {
+    color: #fff;
+    margin: 10px 50px;
+    position: relative;
+}
+
+.section3 article .txt a {
+    position: absolute;
+    left: -5px;
+    top: 70px;
+}
+
+.section3 article .present {
+    width: 635px;
+    position: absolute;
+    right: 0;
+    top: 59%;
+}
+
+.section3 article .present img {
+    position: absolute;
+    left: 0;
+    top: 635px;
+}
+
+@keyframes present {
+    0% {
+        top: 635px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+
+/* fullpage - section4 */
+.section4 article {
+    width: 1024px;
+    left: 50%;
+    top: 168px;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.section4 article .title {
+    width: 50%;
+    margin: 0 50px;
+}
+
+.section4 article .title img {
+    width: 90%;
+}
+
+.section4 article .txt {
+    color: #fff;
+    margin: 20px 50px;
+}
+
+.section4 article .shopping {
+    width: 635px;
+    position: absolute;
+    right: 0;
+    top: 55%;
+}
+
+.section4 article .shopping img {
+    position: absolute;
+    left: 0;
+    top: 635px;
+}
+
+@keyframes shopping {
+    0% {
+        top: 635px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+
+/* fullpage - section5 */
+.section5 article {
+    width: 1024px;
+    left: 50%;
+    top: 168px;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.section5 article .title {
+    width: 50%;
+    margin: 0 50px;
+}
+
+.section5 article .title img {
+    width: 90%;
+}
+
+.section5 article .txt {
+    color: #fff;
+    margin: 15px 50px;
+}
+
+.section5 article .txt span {
+    opacity: 0.7;
+    font-size: 14px;
+    display: block;
+}
+
+.section5 article .rider2 {
+    width: 635px;
+    position: absolute;
+    right: 4%;
+    top: 9%;
+}
+
+.section5 article .rider2 img {
+    position: absolute;
+    left: 635px;
+    top: 0;
+    opacity: 0;
+}
+
+@keyframes rider2 {
+    0% {
+        left: 635px;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+
+/* fullpage - section6 */
+.section6 article {
+    width: 1024px;
+    left: 50%;
+    top: 168px;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.section6 article .title {
+    width: 50%;
+    margin: 0 50px;
+}
+
+.section6 article .title img {
+    width: 90%;
+}
+
+.section6 article .txt {
+    color: #fff;
+    margin: 15px 50px;
+}
+
+.section6 article .flag {
+    width: 635px;
+    position: absolute;
+    right: 0;
+    top: 57%;
+}
+
+.section6 article .flag img {
+    position: absolute;
+    left: 0;
+    top: 635px;
+}
+
+@keyframes flag {
+    0% {
+        top: 635px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+
+/* fullpage - footer */
+.footer article {
+    width: 1024px;
+    height: 100%;
+    left: 50%;
+    top: 135px;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.footer article ul.fnb {
+    width: 300px;
+    height: 80px;
+    display: inline-block;
+}
+
+.footer article ul.fnb > li {
+    width: 140px;
+    height: 24px;
+    margin-bottom: 17px;
+    float: left;
+}
+
+.footer article ul.fnb > li > a {
+    width: 100%;
+    height: 100%;
+}
+
+.footer article ul.fnb > li > a img {
+    width: auto;
+    height: 100%;
+}
+
+.footer article ul.footer_sns {
+    position: absolute;
+    width: 100%;
+    left: -1.5%;
+    top: 13%;
+}
+
+.footer article ul.footer_sns > li {
+    float: left;
+    width: 40px;
+    margin-right: 30px;
+}
+
+.footer article ul.footer_sns > li:nth-child(2) {
+    margin-right: 35px;
+}
+.footer article ul.footer_sns > li:nth-child(3) {
+    margin-right: 35px;
+}
+
+.footer article ul.footer_sns > li > a img {
+    width: 40px;
+}
+
+.footer article .title {
+    width: 193px;
+    float: right;
+    margin-right: 253px;
+}
+
+.footer article .title a {
+    margin-top: 35px;
+    display: block;
+}
+
+.footer article .info {
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    font-size: 14px;
+}
+
+.footer article .info p {
+    margin-bottom: 25px;
+}
+
+.footer article .info p span {
+    line-height: 1.5;
+}
+
+.footer article .info p a {
+    background: url(../images/footer/line.png) center bottom / 100% 3px no-repeat;
+}
+
