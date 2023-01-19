@@ -3,7 +3,7 @@ $(document).ready(function(){
     $("#fullpage").fullpage({
         navigation: true,
         navigationPosition: 'right',
-        sectionsColor: ['','rgb(42, 193, 188)','rgb(42, 193, 188)','rgb(42, 193, 188)','rgb(42, 193, 188)','rgb(42, 193, 188)','rgb(42, 193, 188)',''],
+        sectionsColor: ['','rgb(42, 193, 188)','rgb(42, 193, 188)','rgb(42, 193, 188)','rgb(42, 193, 188)','rgb(42, 193, 188)','rgb(42, 193, 188)','#fff'],
         onLeave: function(anchorLink, index){
             if(index==1){
                 $(".rider").css({"opacity":"1" , "z-index":"10"});
