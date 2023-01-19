@@ -505,11 +505,9 @@ header nav ul.gnb > li > a {
 }
 
 .footer article ul.footer_sns {
-    position: absolute;
     width: 100%;
-    left: -1.5%;
-    top: 13%;
-    margin-left: 50px;
+    margin-top: 45px;
+    margin-left: 45px;
 }
 
 .footer article ul.footer_sns > li {
@@ -530,9 +528,10 @@ header nav ul.gnb > li > a {
 }
 
 .footer article .title {
+    position: absolute;
+    right: 250px;
+    top: 0;
     width: 193px;
-    float: right;
-    margin-right: 300px;
 }
 
 .footer article .title img {
@@ -807,7 +806,6 @@ header nav ul.gnb > li > a {
     }
 
     .footer article ul.footer_sns {
-        margin-top: 220px;
         margin-left: 25px;
     }
 
@@ -818,6 +816,10 @@ header nav ul.gnb > li > a {
 
     .footer article .info p {
         margin-bottom: 12px;
+    }
+
+    .footer article ul.footer_sns {
+        margin-top: 10px;
     }
 
     .footer article ul.footer_sns > li {
