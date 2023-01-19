@@ -6,27 +6,27 @@ $(document).ready(function(){
         sectionsColor: ['','rgb(42, 193, 188)','rgb(42, 193, 188)','rgb(42, 193, 188)','rgb(42, 193, 188)','rgb(42, 193, 188)','rgb(42, 193, 188)',''],
         onLeave: function(anchorLink, index){
             if(index==1){
-                $(".rider").css("opacity","1");
+                $(".rider").css({"opacity":"1" , "z-index":"10"});
             }else{
-                $(".rider").css("opacity","0");
+                $(".rider").css({"opacity":"0" , "z-index":"-10"});
             }
 
             if(index==8){
-                $(".scroll").css("opacity","0");
+                $(".scroll").css("display","none");
             }else{
-                $(".scroll").css("opacity","1");
+                $(".scroll").css("display","block");
             }
 
             if(index==1){
-                $(".appdown").css("opacity","0");
+                $(".appdown").css("display","none");
             }else{
-                $(".appdown").css("opacity","1");
+                $(".appdown").css("display","block");
             }
 
             if(index==8){
-                $("header").css("opacity","0");
+                $("header").css("display","none");
             }else{
-                $("header").css("opacity","1");
+                $("header").css("display","block");
             }
         },
         afterLoad: function(anchorLink, index){
@@ -35,23 +35,23 @@ $(document).ready(function(){
             }
 
             if(index==3){
-                $(".section2 article .people img").css("animation","0.8s ease 0s 1 normal forwards running people")
+                $(".section2 article .people").css({"animation":"0.8s ease 0s 1 normal forwards running up"})
             }
 
             if(index==4){
-                $(".section3 article .present img").css("animation","0.8s ease 0s 1 normal forwards running present")
+                $(".section3 article .present").css({"animation":"0.8s ease 0s 1 normal forwards running up"})
             }
 
             if(index==5){
-                $(".section4 article .shopping img").css("animation","0.8s ease 0s 1 normal forwards running shopping")
+                $(".section4 article .shopping").css({"animation":"0.8s ease 0s 1 normal forwards running up"})
             }
 
             if(index==6){
-                $(".section5 article .rider2 img").css("animation","0.8s ease 0s 1 normal forwards running rider2")
+                $(".section5 article .rider2").css({"animation":"0.8s ease 0s 1 normal forwards running left"})
             }
 
             if(index==7){
-                $(".section6 article .flag img").css("animation","0.8s ease 0s 1 normal forwards running flag")
+                $(".section6 article .flag").css({"animation":"0.8s ease 0s 1 normal forwards running up"})
             }
         }
 

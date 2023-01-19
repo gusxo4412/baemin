@@ -103,6 +103,18 @@ html.fp-enabled,
 #fp-nav.right {
     right: 11.5%;
 }
+
+@media screen and (max-width:767px) {
+    #fp-nav{
+        top: 44.5%;
+    }
+
+    #fp-nav.right {
+        right: 6.5%;
+    }
+}
+
+
 #fp-nav.left {
     left: 17px;
 }
